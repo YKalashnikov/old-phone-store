@@ -26,6 +26,13 @@
 $ npm install
 $ npm run dev
 $ go to http://localhost:3000
+
+```
+
+```
+create a file keys.dev.js in the folder 
+keys and place all the keys
+
 ```
   
  ### Email Confirmation
