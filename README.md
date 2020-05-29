@@ -22,6 +22,12 @@
   - multer
   - nodemon
   
+ ```shell
+$ npm install
+$ npm run dev
+$ go to http://localhost:3000
+```
+  
  ### Email Confirmation
  ![](https://github.com/YKalashnikov/old-phone-store/blob/master/images/Screen%20Shot%202020-05-28%20at%204.55.36%20PM.png)
 
