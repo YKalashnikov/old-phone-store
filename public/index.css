@@ -1,0 +1,121 @@
+.nav-wrapper {
+  padding: 0 2rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  color:red;
+}
+.description{
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline gray;
+}
+
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone h1 {
+  margin-bottom: 2rem;
+
+}
+
+.phone img {
+  max-width: 600px;
+  height: auto;
+}
+
+.phone .price.big {
+  font-size: 2.5rem;
+}
+
+.card-action.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phone-form {
+  margin-bottom: 2rem;
+}
+
+.auth {
+  padding-top: 1rem;
+}
+
+.alert {
+  padding: .5rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: rgba(255, 0, 0, .3);
+  color: red;
+}
+
+.avatar {
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+}
+
+ .card-image img{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top:1rem;
+  color:red;
+
+ 
+}
+
+.card .card-image .card-title{
+  color:black;
+  border:1px solid gray;
+  border-radius: 50%;
+  padding:1rem;
+}
+
+/* .card .card-image {
+  width:auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+} */
+
+.grid {
+  display: flex;
+  flex-direction: row;
+}
+
+h1{
+  text-align: center;
+}
+.background-center{
+  background-image: url('https://cdn.pixabay.com/photo/2017/03/28/12/20/phone-2182002_1280.jpg');
+  height: 600px;
+  background-color: #cccccc;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+.change-red{
+  color:red;
+  text-decoration: underline blue;
+}
+
+small {
+  text-decoration: underline;
+  padding:1rem;
+}
+

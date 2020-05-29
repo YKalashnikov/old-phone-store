@@ -1,0 +1,53 @@
+<nav class="blue darken-4">
+  <div class="nav-wrapper">
+    <a href="/" class="brand-logo">Phone Store</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+      {{#if isHome}}
+        <li class="active"><a href="/">Main</a></li>
+      {{else}}
+        <li><a href="/">Main</a></li>
+      {{/if}}
+
+      {{#if isPhones}}
+        <li class="active"><a href="/phones">Phones</a></li>
+      {{else}}
+        <li><a href="/phones">Phones</a></li>
+      {{/if}}
+
+      {{#if isAuth}}
+        {{#if isAdd}}
+          <li class="active"><a href="/add">Add Phone </a></li>
+        {{else}}
+          <li><a href="/add">Add Phone</a></li>
+        {{/if}} 
+
+        {{#if isProfile}}
+          <li class="active"><a href="/profile">Profile</a></li>
+        {{else}}
+          <li><a href="/profile">Profile</a></li>
+        {{/if}} 
+
+        {{#if isCard}}
+          <li class="active"><a href="/card">Cart</a></li>
+        {{else}}
+          <li><a href="/card">Cart</a></li>
+        {{/if}} 
+
+        {{#if isOrder}}
+          <li class="active"><a href="/orders">Orders</a></li>
+        {{else}}
+          <li><a href="/orders">Orders</a></li>
+        {{/if}} 
+
+        <li><a href="/auth/logout">Log Out</a></li>
+      {{else}}
+        {{#if isLogin}}
+          <li class="active"><a href="/auth/login#login">Log In</a></li>
+        {{else}}
+          <li><a href="/auth/login#login">Log In</a></li>
+        {{/if}} 
+      {{/if}}
+    </ul>
+  </div>
+</nav>

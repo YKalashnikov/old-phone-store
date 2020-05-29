@@ -1,0 +1,40 @@
+<h1>Cart</h1>
+
+<div id="card">
+{{#if phones.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      {{#each phones}}
+      <tr>
+        <td>{{title}}</td>
+        <td>{{count}}</td>
+        <td>
+          <button 
+            class="btn btm-small js-remove" 
+            data-id="{{id}}"
+            data-csrf="{{@root.csrf}}"
+          >Remove</button>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <p><strong>Price:</strong> <span class="price">{{price}}</span></p>
+
+  <form action="/orders" method="POST">
+    <input type="hidden" name="_csrf" value="{{csrf}}">
+    <button type="submit" class="btn">Place order</button>
+  </form>
+{{else}}
+  <p>Cart is empty</p>
+{{/if}}
+</div>

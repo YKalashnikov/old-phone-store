@@ -1,0 +1,39 @@
+<h1>Phones</h1>
+
+{{#if phones.length}}
+{{#each phones}}
+<div class="row">
+  <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{img}}" alt="{{title}}">
+          <span class="card-title">{{title}}</span>
+      </div>
+       <div class="card-content">
+        <p class="description">{{description}}</p>
+      </div>
+      <div class="card-content">
+        <p class="price">{{price}}</p>
+      </div>
+      <div class="card-action actions">
+        <a href="/phones/{{id}}" target="_blank">Open</a>
+        {{#if @root.isAuth}}
+
+          {{#ifeq userId._id @root.userId}}
+            <a href="/phones/{{id}}/edit?allow=true">Edit</a>
+          {{/ifeq}}
+
+          <form action="/card/add" method="POST">
+            <input type="hidden" name="_csrf" value="{{@root.csrf}}">
+            <input type="hidden" name="id" value="{{id}}">
+            <button type="submit" class="btn btn-primary light-blue">Buy</button> 
+          </form>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+{{else}}
+<p>No Phones Yet</p>
+{{/if}}

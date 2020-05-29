@@ -1,0 +1,35 @@
+<h1>Add Phone</h1>
+
+{{#if error}}
+  <p class="alert">{{error}}</p>
+{{/if}}
+
+<form action="/add" method="POST" novalidate>
+  <div class="input-field">
+    <input id="title" name="title" type="text" class="validate" required value="{{data.title}}">
+    <label for="title">Name of phone model</label>
+    <span class="helper-text" data-error="Add Title"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="price" name="price" type="number" class="validate" required min="1" value="{{data.price}}">
+    <label for="price">Price</label>
+    <span class="helper-text" data-error="Add price"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="description" name="description" type="text" class="validate" required min="5" value="{{data.description}}">
+    <label for="description">Description</label>
+    <span class="helper-text" data-error="Add Description"></span>
+  </div>
+
+  <div class="input-field">
+    <input id="img" name="img" type="text" class="validate" required value="{{data.img}}">
+    <label for="img">URL of the phone</label>
+    <span class="helper-text" data-error="Add Url of The Image"></span>
+  </div>
+
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+
+  <button class="btn btn-primary light-blue">Add phone</button>
+</form>
